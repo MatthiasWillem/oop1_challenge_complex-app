@@ -124,7 +124,7 @@ public class ComplexTest {
     Complex first = new Complex(3, 2);
     Complex second = new Complex(1, 7);
 
-    Complex result = first.multiply(second);
+    Complex result = first.multiplycomplex(second);
 
     assertEquals(-11, result.getReal(), delta);
     assertEquals(23, result.getImaginary(), delta);
@@ -140,4 +140,27 @@ public class ComplexTest {
     assertEquals(12.5, result.getReal(), delta);
     assertEquals(-1.5, result.getImaginary(), delta);
   }
+
+  @Test
+  public void testDivideAnotherComplex() {
+    Complex first = new Complex(1, 1);
+    Complex second = new Complex(1, 1);
+
+    Complex result = first.dividecomplex(second);
+
+    assertEquals(1 ,result.getReal(), delta);
+    assertEquals(0 ,result.getImaginary(), delta);
+  }
+  
+  @Test
+  public void testMultiplyByFactor() {
+    Complex first = new Complex(25, -3);
+    double factor = 2;
+
+    Complex result = first.multiply(factor);
+
+    assertEquals(50, result.getReal(), delta);
+    assertEquals(-6, result.getImaginary(), delta);
+  }
+
 }

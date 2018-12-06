@@ -1,16 +1,9 @@
 package be.vives.oop.complex;
 
-/**
- * Hello world!
- */
 public final class App {
     private App() {
     }
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
       Complex origin = new Complex();
       System.out.println("Complex origin: " + origin);
